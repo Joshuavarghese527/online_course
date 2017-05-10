@@ -1,12 +1,5 @@
 source 'https://rubygems.org'
 
-git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
-  "https://github.com/#{repo_name}.git"
-end
-
-
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
@@ -29,7 +22,18 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'materialize-sass'
+gem 'devise', '>= 3.2.4'
+gem 'toastr-rails'
 
+gem 'sendgrid-ruby'
+gem "figaro"
+
+gem 'omniauth'
+gem 'omniauth-facebook'
+gem 'omniauth-google-oauth2'
+
+gem 'activeadmin' , github: 'activeadmin'
+gem 'active_skin'  
 
 gem 'rails_12factor', group: :production
 
