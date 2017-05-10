@@ -35,6 +35,8 @@ gem 'omniauth-google-oauth2'
 gem 'activeadmin' , github: 'activeadmin'
 gem 'active_skin'  
 
+gem 'paperclip', '~> 4.3', '>= 4.3.6'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do
