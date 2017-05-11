@@ -21,6 +21,7 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
+gem 'sendgrid-ruby'
 gem 'materialize-sass'
 gem 'devise', '>= 3.2.4'
 gem 'toastr-rails'
