@@ -1,6 +1,6 @@
 Devise.setup do |config|
   
-  config.mailer_sender = 'Leo @ Code4Pro <no-reply@code4pro.com>'
+  config.mailer_sender = 'Joshua Varghese @ Code4Pro <no-reply@code4pro.com>'
 
   require 'devise/orm/active_record'
 

@@ -25,7 +25,8 @@ gem 'materialize-sass'
 gem 'devise', '>= 3.2.4'
 gem 'toastr-rails'
 
-gem 'sendgrid-ruby'
+gem 'mandrill-api', '1.0.52', require: 'mandrill'
+
 gem "figaro"
 
 gem 'omniauth'
@@ -44,6 +45,8 @@ gem 'coderay', '~> 1.1', '>= 1.1.1'
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 
 gem 'active_admin-sortable_tree', '~> 0.2.1'
+
+gem 'stripe', '~> 1.38'
 
 gem 'rails_12factor', group: :production
 

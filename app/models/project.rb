@@ -24,4 +24,8 @@ class Project < ApplicationRecord
   def average_rating
     reviews.blank? ? 0 : reviews.average(:star).round(2)
   end
+  
+  def price_in_cents
+    (self.price*100).to_i
+  end
 end

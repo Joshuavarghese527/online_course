@@ -26,17 +26,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
-  config.action_mailer.smtp_settings = {
-    address: 'smtp.sendgrid.net',
-    port: 587,
-    enable_starttls_auto: true,
-    user_name: 'YOUR_SENDGRID_USERNAME',
-    password: 'YOUR_SENDGRID_PASSWORD',
-    authentication: 'plain'
-}
 
   # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  config.action_mailer.raise_delivery_errors = true
 
   config.action_mailer.perform_caching = false
 
@@ -53,6 +45,18 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+
+  config.action_mailer.default_url_options = {host: 'localhost:3030'}
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.mandrillapp.com',
+    port: 587,
+    enable_starttls_auto: true,
+    user_name: ENV['YOUR_MANDRILL_EMAIL'],
+    password: ENV['YOUR_MANDRILL_KEY'],
+    authentication: 'login'
+  }
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
