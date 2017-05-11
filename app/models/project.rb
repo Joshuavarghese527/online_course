@@ -1,7 +1,7 @@
 class Project < ApplicationRecord
   extend FriendlyId
   friendly_id :name, use: [:slugged, :finders]
-  
+
   has_many :tasks
 
   validates :name, presence: true, length: { maximum: 50 }
@@ -10,4 +10,8 @@ class Project < ApplicationRecord
 
   has_attached_file :image, :styles => { :medium => "680x300>", :thumb => "170x75>" }
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
+  def shortname 
+    name.length > 25? name[0..25] + "..." : name
+  end
 end

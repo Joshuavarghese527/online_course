@@ -43,6 +43,8 @@ gem 'coderay', '~> 1.1', '>= 1.1.1'
 
 gem 'friendly_id', '~> 5.2', '>= 5.2.1'
 
+gem 'active_admin-sortable_tree', '~> 0.2.1'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do
