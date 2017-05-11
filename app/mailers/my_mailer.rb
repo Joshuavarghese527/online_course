@@ -30,7 +30,6 @@ class MyMailer < ActionMailer::Base
 
     sendgrid_client.client.mail._("send").post(request_body: data)
   end
-end
 
   def new_user(user)
     template_name = "new-user"
