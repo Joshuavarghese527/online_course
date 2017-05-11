@@ -37,6 +37,12 @@ gem 'active_skin'
 
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 
+gem 'redcarpet', '~> 3.3', '>= 3.3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.1'
+
+
+gem 'friendly_id', '~> 5.2', '>= 5.2.1'
+
 gem 'rails_12factor', group: :production
 
 group :development, :test do
