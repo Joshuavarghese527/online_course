@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def avatar_url(user)
+def avatar_url(user)
     gravatar_id = Digest::MD5::hexdigest(user.email).downcase
     if user.image
       user.image
@@ -27,5 +27,14 @@ module ApplicationHelper
 
     markdown_to_html = Redcarpet::Markdown.new(coderayified, options)
     markdown_to_html.render(text).html_safe
+  end
+
+  def timeago(time, options ={})
+    options[:class] ||= "timeago"
+    content_tag(
+      :time,
+      time.to_s,
+      options.merge(datetime: time.getutc.iso8601)
+    ) if time
   end
 end
