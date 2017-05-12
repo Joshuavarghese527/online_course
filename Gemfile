@@ -37,7 +37,7 @@ gem 'omniauth-google-oauth2'
 gem 'activeadmin' , github: 'activeadmin'
 gem 'active_skin'  
 
-gem 'paperclip', '~> 4.3', '>= 4.3.6'
+gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
 
 gem 'redcarpet', '~> 3.3', '>= 3.3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
