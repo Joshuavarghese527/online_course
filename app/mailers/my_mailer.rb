@@ -46,7 +46,7 @@ class MyMailer < ActionMailer::Base
       ]
     }
 
-    sendgrid_client.messages.send_template template_name, template_content, message
+    sendgrid_client.client.mail.send_template template_name, template_content, message
   end
 
   def new_receipt(user, project)
@@ -67,6 +67,6 @@ class MyMailer < ActionMailer::Base
       ]
     }
     
-    sendgrid_client.messages.send_template template_name, template_content, message
+    sendgrid_client.client.mail.send_template template_name, template_content, message
   end
 end
