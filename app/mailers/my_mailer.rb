@@ -1,6 +1,11 @@
 class MyMailer < ActionMailer::Base
 
-def new_user(user)
+  def sendgrid_client
+    @sendgrid_client ||= SendGrid::API.new(api_key: ENV['SENDGRID_API_KEY'])
+  end
+
+
+  def new_user(user)
     template_id = "template_id_of_new_user"
 
     data = {
