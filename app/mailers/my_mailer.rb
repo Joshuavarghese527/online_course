@@ -48,7 +48,7 @@ class MyMailer < ActionMailer::Base
     sendgrid_client.messages.send_template template_name, template_content, message
   end
 
-  ef new_receipt(user, project)
+  def new_receipt(user, project)
     template_name = "new-receipt"
     template_content = []
     message = {
